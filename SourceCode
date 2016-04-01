@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program
+{
+    class Program
+    {
+        static void Main()
+        {
+
+
+            decimal one = 1;
+            decimal two = 0.001m;
+            decimal three = 0.000001m;
+            decimal four = 0.000000001m;
+            decimal five = 0.000000000001m;
+            decimal answer;
+            int y = 0;
+
+            while (y < 1)
+            {
+
+
+                Console.WriteLine("SI converter!\nPlease, enter value: ");
+                decimal value = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("\nFactors: \n1.One \n2.Milli(m)\n3.Micro(µ)\n4.Nano(n)\n5.Pico(p)\nPlease enter factor of your value: ");
+                decimal factor = int.Parse(Console.ReadLine());
+
+                if (factor == 1)
+                {
+                    factor = one;
+                }
+                else if (factor == 2)
+                {
+                    factor = two;
+                }
+                else if (factor == 3)
+                {
+                    factor = three;
+                }
+                else if (factor == 4)
+                {
+                    factor = four;
+                }
+                else if (factor == 5)
+                {
+                    factor = five;
+                }
+
+
+                Console.WriteLine("\nFactors: \n1.One \n2.Milli(m)\n3.Micro(µ)\n4.Nano(n)\n5.Pico(p)\nPlease enter the factor in which you want to convert: ");
+                decimal factor2 = Convert.ToInt32(Console.ReadLine());
+
+                if (factor2 == 1)
+                {
+                    factor2 = one;
+                    answer = value * factor;
+                    Console.WriteLine("The answer is : " + answer);
+                }
+                else if (factor2 == 2)
+                {
+                    factor2 = two;
+                }
+                else if (factor2 == 3)
+                {
+                    factor2 = three;
+                }
+                else if (factor2 == 4)
+                {
+                    factor2 = four;
+                }
+                else if (factor2 == 5)
+                {
+                    factor2 = five;
+                }
+
+
+
+                answer = value * factor / factor2;
+                Console.WriteLine("The answer is : " + answer);
+
+
+                Console.WriteLine("Go again?\nY / N");
+                char ans = char.Parse(Console.ReadLine());
+                if (ans == 'n')
+                {
+                    y = 8;
+                }
+                if (ans == 'y')
+                {
+
+                    y = 0;
+                    Console.Clear();
+
+                }
+            }
+        }
+    }
+}
+    
